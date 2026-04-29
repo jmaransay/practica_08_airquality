@@ -41,7 +41,7 @@ def extract_and_transform():
 
             # We convert the datetime information of last measure to recognisable format:
             df['latest.datetime.utc'] = pd.to_datetime(df['latest.datetime.utc'], errors='coerce')
-            df['latest.datetime.local'] = pd.to_datetime(df['latest.datetime.local'], errors='coerce').dt.tz_convert('Europe/Madrid')
+           df['latest.datetime.local'] = pd.to_datetime(df['latest.datetime.local'], errors='coerce').dt.tz_convert('Europe/Madrid')
             
             return df
 
@@ -67,3 +67,4 @@ if __name__ == "__main__":
         df.to_csv(data_file, index=False)
     else:
         df.to_csv(data_file, mode='a', header=False, index=False)
+
