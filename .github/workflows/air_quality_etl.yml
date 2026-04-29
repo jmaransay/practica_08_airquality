@@ -37,5 +37,5 @@ jobs:
           git config --global user.name "$AUTOMATION_USERNAME"
           git config --global user.email "$AUTOMATION_EMAIL"
           git add data/.
-          git commit -am "gh actions: Update data$(date)"
+          git commit -am "gh actions: Update data $(date)"
           git push
