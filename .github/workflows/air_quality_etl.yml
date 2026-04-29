@@ -1,9 +1,9 @@
 name: ETL Pipeline
 run-name: Daily ETL Pipeline Run
 env:
-  PYTHON_VERSION: "3.10"
-  AUTOMATION_USERNAME: "USERNAME"
-  AUTOMATION_EMAIL: "USEREMAIL"
+  PYTHON_VERSION: "3.12"
+  AUTOMATION_USERNAME: "jmaransay"
+  AUTOMATION_EMAIL: "jmaransay@gmail.com"
 
 on:
   workflow_dispatch:
@@ -37,5 +37,5 @@ jobs:
           git config --global user.name "$AUTOMATION_USERNAME"
           git config --global user.email "$AUTOMATION_EMAIL"
           git add data/.
-          git commit -m "Updating Data"
+          git commit -am "gh actions: Update data$(date)"
           git push
